@@ -1,0 +1,76 @@
+@import 'mainStyles';
+
+.sectionBox{
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  position: relative;
+  overflow: hidden;
+
+  @media (max-width: 1400px) {
+    background-position: 100% 100%;
+  }
+
+  .container{
+    @include adaptiveScreen();
+    @include mainMarginContainer();
+
+    position: relative;
+    z-index: 1;
+
+    .homeBox{
+      min-height: 100vh;
+      align-items: center!important;
+      --bs-gutter-x: 1.5rem;
+      --bs-gutter-y: 0;
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: calc(var(--bs-gutter-y)*-1);
+      margin-right: calc(var(--bs-gutter-x)*-0.5);
+      margin-left: calc(var(--bs-gutter-x)*-0.5);
+
+      @media screen and (max-width: 767px) {
+        padding: 120px 0;
+        flex-direction: column-reverse;
+      }
+
+      @media screen and (max-width: 1024px) {
+        min-height: 100vh;
+      }
+
+      .info{
+       @include boxForHome();
+
+        .typeBox{
+          padding-top: 90px;
+          padding-bottom: 50px;
+
+          h1{
+            color: $mainText;
+            font-family: "Rubik",serif;
+            font-size: 80px;
+            font-weight: 700;
+            line-height: 1;
+            margin: 0 0 15px;
+            
+            @media (max-width: 1200px) {
+              font-size: 2.5rem;
+            }
+          }
+          p{
+            color: $secondaryText;
+            margin-top: 0;
+            margin-bottom: 1rem;
+            max-width: 450px;
+          }
+        }
+      }
+
+      .photo{
+        @include boxForHome();
+        height: 500px;
+        background-color: green;
+      }
+    }
+  }
+}

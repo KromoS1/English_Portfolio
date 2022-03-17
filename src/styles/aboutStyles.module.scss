@@ -1,0 +1,209 @@
+@import "mainStyles";
+
+.sectionBox{
+  background: #f7f7ff;
+  padding: 100px 0;
+  position: relative;
+
+  .container{
+    @include adaptiveScreen();
+    @include mainMarginContainer();
+
+    .aboutBox{
+      align-items: center!important;
+      --bs-gutter-x: 1.5rem;
+      --bs-gutter-y: 0;
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: calc(var(--bs-gutter-y)*-1);
+      margin-right: calc(var(--bs-gutter-x)*-0.5);
+      margin-left: calc(var(--bs-gutter-x)*-0.5);
+
+      .photo{
+        @include row();
+
+        @media (min-width: 768px) {
+          flex: 0 0 auto;
+          width: 50%;
+        }
+
+        @media (min-width: 992px) {
+          flex: 0 0 auto;
+          width: 33.33333333%;
+        }
+
+        .aboutMe{
+          .img{
+            position: relative;
+            .imgIn{
+              border-radius: 50%;
+              max-width: 356px;
+              max-height: 358px;
+              margin: auto;
+              overflow: hidden;
+              border: 5px solid $orange;
+              img{
+                max-width: 100%;
+              }
+            }
+          }
+          .infoName{
+            color: $mainText;
+            text-align: center;
+            padding-top: 40px;
+            p{
+              color: $mainText;
+              margin: 0;
+              font-size: 16px;
+            }
+            h3{
+              @include h3();
+              font-weight: 500;
+
+            }
+          }
+        }
+      }
+
+      .biography{
+        @include row();
+
+        margin-left: auto!important;
+
+        @media (min-width: 992px) {
+          flex: 0 0 auto;
+          width: 58.33333333%;
+        }
+
+        .info{
+          .title{
+            margin-bottom: 30px;
+
+            h3{
+              @include h3();
+
+              &:after{
+                @include afterBall();
+              }
+            }
+          }
+          .aboutText{
+            p{
+              @include p();
+            }
+          }
+          .infoList{
+            padding-top: 15px;
+
+            .rowInfoList{
+              @include row();
+              margin-top: calc(var(--bs-gutter-y)*-1);
+              display: flex;
+
+              .columnList{
+                ul{
+                  margin: 0;
+                  padding: 0;
+                  list-style: none;
+                  li{
+                    padding: 4px 0;
+                    label{
+                      color: $mainText;
+                      margin: 0;
+                      font-weight: 500;
+                      padding-right: 10px;
+                      display: inline-block;
+                    }
+                    span{
+                      @include p();
+                    }
+                  }
+                }
+
+                @media (min-width: 576px) {
+                  flex: 0 0 auto;
+                  width: 50%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .separated{
+     @include separated();
+    }
+
+    .title{
+      margin-bottom: 35px;
+
+      h3{
+        @include h3();
+
+        &:after{
+          @include afterBall();
+        }
+      }
+    }
+
+    .boxWe{
+      --bs-gutter-x: 1.5rem;
+      --bs-gutter-y: 0;
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: calc(var(--bs-gutter-y)*-1);
+      margin-right: calc(var(--bs-gutter-x)*-0.5);
+      margin-left: calc(var(--bs-gutter-x)*-0.5);
+
+      .blockWe{
+        @include blockWe();
+        .block{
+          &:before{
+            content: "";
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            transition: .5s ease-in-out;
+            top: -220px;
+            left: -220px;
+            border-radius: 0;
+            z-index: -1;
+            background: #0b0b13;
+          }
+          &:hover:before{
+            content: "";
+            width: 200px;
+            left: -40px;
+            top: -72px;
+            height: 200px;
+            border-radius: 50%;
+          }
+
+          @include block();
+          height: 200px;
+
+          &:after{
+            content: "";
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            transition: .5s ease-in-out;
+            top: -72px;
+            left: -40px;
+            border-radius: 50%;
+            z-index: -2;
+            background: $orange;
+          }
+          &:hover:after{
+            content: "";
+            width: 120%;
+            left: -10%;
+            top: -10%;
+            height: 120%;
+            border-radius: 0;
+          }
+        }
+      }
+    }
+  }
+}

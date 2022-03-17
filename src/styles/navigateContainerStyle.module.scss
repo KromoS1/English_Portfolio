@@ -1,0 +1,70 @@
+@import 'mainStyles';
+
+.container{
+  width: 80px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  background: #fff;
+  border-right: 1px solid rgba(11,11,19,.1);
+
+  @media (max-width: 767px) {
+    transition: all .35s ease;
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+    z-index: 222;
+  }
+  
+  .scroll_bar{
+    height: 100%;
+
+    .top{
+      .logo_box{
+        .logo{
+          background: $orange;
+          color: $white;
+          font-weight: 600;
+          text-decoration: none;
+          font-size: 40px;
+          height: 80px;
+          width: 80px;
+          line-height: 80px;
+          display: inline-block;
+          vertical-align: top;
+          text-align: center;
+        }
+      }
+    }
+
+    .nav_menu{
+      @include borderNavIcon();
+
+      padding-top: 45px;
+      padding-bottom: 45px;
+      display: flex;
+      flex-wrap: wrap;
+      padding-left: 0;
+      margin-bottom: 0;
+      list-style: none;
+
+      .icon_box{
+        width: 100%;
+
+        .icon_link{
+          @include displayFlex(row,center,center);
+
+          color: $mainText;
+          cursor: pointer;
+          margin: 0;
+          padding: 20px 0;
+          text-decoration: none;
+          transition: all .35s ease;
+          text-align: center;
+          font-size: 27px;
+        }
+      }
+    }
+  }
+}
+
