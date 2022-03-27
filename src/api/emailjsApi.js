@@ -1,11 +1,14 @@
 import emailjs from "@emailjs/browser";
+import {SERVICE_KEY, TEMPL_KEY, USER_ID} from "./keysEmailJS";
 
-export const sendForm = async (form) => {
-
+export const sendForm = (form) => {
     try{
-        const response = await emailjs.send('service_jtfodsh','template_e8xk519',{...form},'QQ48SW3C2ps98CdoQ');
-
-        console.log(response);
+        emailjs.sendForm(SERVICE_KEY,TEMPL_KEY,form,USER_ID)
+            .then(res => {
+                if (res.status === 200){
+                    alert('Ваша заявка отправлена. Наши менеджеры с вами свяжуться.');
+                }
+            });
     }catch (e){
         console.log(e.message);
     }

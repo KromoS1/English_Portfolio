@@ -1,25 +1,14 @@
-import React, {useState} from "react";
+import React, {useRef} from "react";
 import style from '../../styles/recordStyles.module.scss';
 import {sendForm} from "../../api/emailjsApi";
 
 export const Record = () => {
 
-    const [name,setName] = useState();
-    const [email,setEmail] = useState();
-    const [phone,setPhone] = useState();
+    const form = useRef();
 
-    const changeName = (e) => {
-        setName(e.currentTarget.value);
-    }
-    const changeEmail = (e) => {
-        setEmail(e.currentTarget.value);
-    }
-    const changePhone = (e) => {
-        setPhone(e.currentTarget.value);
-    }
-
-    const send = async () => {
-        sendForm({name,email,phone}).then();
+    const send = (e) => {
+        e.preventDefault();
+        sendForm(form.current);
     }
 
     return (
@@ -31,26 +20,26 @@ export const Record = () => {
                 <div className={style.row}>
                     <div className={style.contactForm}>
                         <h4>Заполните форму что бы записаться</h4>
-                        <form>
+                        <form ref={form} onSubmit={send}>
                             <div className={style.rowForm}>
                                 <div className={style.inputBox}>
                                     <div className={style.inputControl}>
-                                        <input type="text" placeholder={"Ваше ФИО"} name={'fullName'} onChange={changeName}/>
+                                        <input type="text" placeholder={"Ваше ФИО"} name={'name'} />
                                     </div>
                                 </div>
                                 <div className={style.inputBox}>
                                     <div className={style.inputControl}>
-                                        <input type="email" placeholder={'Почта'} name={'email'} onChange={changeEmail}/>
+                                        <input type="email" placeholder={'Почта'} name={'email'} />
                                     </div>
                                 </div>
                                 <div className={style.inputBox}>
                                     <div className={style.inputControl}>
-                                        <input type="tel" placeholder={'Номер телефона'} value={phone} onChange={changePhone}/>
+                                        <input type="tel" placeholder={'Номер телефона'} name={'phone'}/>
                                     </div>
                                 </div>
                                 <div className={style.inputBox}>
                                     <div className={style.btnBar}>
-                                        <button onClick={send}>Записаться</button>
+                                        <button type={"submit"}>Записаться</button>
                                     </div>
                                 </div>
                             </div>
