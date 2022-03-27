@@ -13,8 +13,7 @@ export const NavigateContainer = () => {
                </div>
                <div className={style.nav_menu}>
                     <IconNav iconName={'home'} size={25} href={'home'}/> {/*главная*/}
-                    <IconNav iconName={'user'} size={25} href={'user'}/> {/*про дашу*/}
-                    <IconNav iconName={'file'} size={25} href={'file'}/> {/*проблемы и почему мы*/}
+                    <IconNav iconName={'user'} size={25} href={'user'}/> {/*про дашу*/ /*проблемы и почему мы*/}
                     <IconNav iconName={'library'} size={25} href={'library'}/> {/*как к нам попасть*/}
                     <IconNav iconName={'users'} size={25} href={'users'}/> {/*преподы и отзывы*/}
                     <IconNav iconName={'pencil'} size={25} href={'pencil'}/> {/*записаться*/}

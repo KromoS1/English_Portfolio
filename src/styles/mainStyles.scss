@@ -21,11 +21,39 @@ $secondaryText: #555;
   }
 }
 
+@mixin h4(){
+  margin: 0;
+  color: $mainText;
+  line-height: 1;
+  position: relative;
+  z-index: 1;
+  font-weight: 550;
+  font-size: 20px;
+
+  @media (min-width: 1200px){
+    font-size: 1.5rem;
+  }
+}
+
+@mixin h5(){
+  margin-bottom: 15px;
+  transition: .5s ease-in-out;
+  font-size: 1.25rem;
+  margin-top: 0;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
 @mixin p(){
   color: $secondaryText;
   font-weight: 400;
   margin-top: 0;
   margin-bottom: 1rem;
+}
+
+@mixin section{
+  padding: 100px 0;
+  position: relative;
 }
 
 @mixin displayFlex($direction,$just,$align) {
@@ -102,6 +130,8 @@ $secondaryText: #555;
 }
 
 @mixin row(){
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
   flex-shrink: 0;
   width: 100%;
   max-width: 100%;
@@ -127,7 +157,7 @@ $secondaryText: #555;
     background: rgba(255,147,1,.5);
     position: absolute;
     top: -8px;
-    left: -15px;
+    left: -2px;
     z-index: -1;
     -webkit-animation: slide-both-sidee 4s infinite both;
     animation: slide-both-side 4s infinite both;
@@ -163,4 +193,80 @@ $secondaryText: #555;
   overflow: hidden;
   position: relative;
   z-index: 1;
+}
+
+@mixin buttonSlicker() {
+  display: none!important;
+  left: -25px;
+  color: transparent;
+  background: transparent;
+  font-size: 0;
+  line-height: 0;
+  position: absolute;
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  transform: translateY(-50%);
+  border: none;
+  text-transform: none;
+  margin: 0;
+  font-family: inherit;
+  cursor: pointer!important;
+  border-radius: 0;
+}
+
+@mixin buttonsSlick(){
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  position: relative;
+  font-size: 0;
+  line-height: 0;
+  display: block;
+  padding: 5px;
+  color: transparent;
+  border: 0;
+  background: transparent;
+
+  &:before{
+    opacity: .75;
+    color: #000;
+    content: "";
+    width: 100%;
+    height: 100%;
+    transition: .3s ease-in-out;
+    font-size: 0;
+    border: 2px solid #ff9301;
+    border-radius: 50%;
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    -webkit-font-smoothing: antialiased;
+  }
+  &:after{
+    transform: scale(.6);
+    content: "";
+    width: 100%;
+    height: 100%;
+    transition: .3s ease-in-out;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #ff9301;
+    border-radius: inherit;
+    z-index: 5;
+  }
+}
+
+@mixin slickActive(){
+  margin: 0 3px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  padding: 0;
 }

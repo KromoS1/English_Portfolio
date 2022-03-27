@@ -3,6 +3,7 @@ import style from '../../styles/aboutStyles.module.scss';
 import {Separated} from "../common/Separated";
 import {BlocWe} from "../common/BlocWe";
 import Me from '../../img/MePhoto.jpg';
+import {Problem} from "../common/Problem";
 
 export const About = () => {
 
@@ -34,12 +35,6 @@ export const About = () => {
                                     позиции требует от нас анализа существующих финансовых и административных условий.
                                     Значимость этих проблем настолько очевидна, что постоянный количественный рост и сфера нашей активности
                                     позволяет выполнить важнейшие задания по разработке всесторонне сбалансированных нововведений.</p>
-                               <p>Повседневная практика показывает, что постоянное информационно-техническое обеспечение
-                                   нашей деятельности обеспечивает актуальность новых предложений. Повседневная практика показывает, что курс на
-                                   социально-ориентированный национальный проект требует от нас системного анализа дальнейших направлений развитая системы
-                                   массового участия! Равным образом постоянное информационно-техническое обеспечение нашей деятельности обеспечивает актуальность
-                                   форм воздействия. Таким образом, постоянное информационно-техническое обеспечение нашей деятельности создаёт предпосылки
-                                   качественно новых шагов для направлений прогрессивного развития?</p>
                            </div>
                            <div className={style.infoList}>
                                <div className={style.rowInfoList}>
@@ -64,12 +59,22 @@ export const About = () => {
                </div>
                 <Separated/>
                 <div className={style.title}>
+                    <h3>Сталкивались с этими проблемами?</h3>
+                </div>
+                <div className={style.problemBox}>
+                    <Problem/>
+                </div>
+                <Separated/>
+                <div className={style.title}>
                     <h3>Почему мы?</h3>
                 </div>
-                <div className={style.boxWe}>
-                    <BlocWe/>
-                    <BlocWe/>
-                    <BlocWe/>
+                <div className={style.blockWeBox}>
+                    <BlocWe title={'Web Design'}
+                            text={'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'}/>
+                    <BlocWe title={'Web Development'}
+                            text={'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'}/>
+                    <BlocWe title={'Seo Marcketing'}
+                            text={'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'}/>
                 </div>
             </div>
         </section>

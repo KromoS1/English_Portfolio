@@ -11,6 +11,10 @@ body {
   overflow: auto;
 }
 
+p{
+  cursor: pointer;
+}
+
 *, :after, :before {
   margin: 0;
   padding: 0;

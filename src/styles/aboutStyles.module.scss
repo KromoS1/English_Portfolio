@@ -1,9 +1,8 @@
 @import "mainStyles";
 
 .sectionBox{
-  background: #f7f7ff;
-  padding: 100px 0;
-  position: relative;
+  background: $grayWhite;
+  @include section();
 
   .container{
     @include adaptiveScreen();
@@ -58,7 +57,7 @@
             }
             h3{
               @include h3();
-              font-weight: 500;
+              font-weight: 600;
 
             }
           }
@@ -110,7 +109,7 @@
                     label{
                       color: $mainText;
                       margin: 0;
-                      font-weight: 500;
+                      font-weight: 600;
                       padding-right: 10px;
                       display: inline-block;
                     }
@@ -130,8 +129,9 @@
         }
       }
     }
-    .separated{
-     @include separated();
+
+    .problemBox{
+      @include row();
     }
 
     .title{
@@ -146,7 +146,7 @@
       }
     }
 
-    .boxWe{
+    .blockWeBox{
       --bs-gutter-x: 1.5rem;
       --bs-gutter-y: 0;
       display: flex;
@@ -157,7 +157,16 @@
 
       .blockWe{
         @include blockWe();
+
         .block{
+          @include block();
+
+          &:hover{
+            -webkit-animation: slideTop .5s ease-in-out 0s 1 normal none running!important;
+            animation: slideTop .5s ease-in-out 0s 1 normal none running!important;
+            color:$white;
+          }
+
           &:before{
             content: "";
             position: absolute;
@@ -179,8 +188,19 @@
             border-radius: 50%;
           }
 
-          @include block();
-          height: 200px;
+          .content{
+            padding-top: 50px;
+
+            h5{
+              @include h5();
+              font-weight: 600;
+            }
+
+            p{
+              margin: 0;
+              transition: .5s ease-in-out;
+            }
+          }
 
           &:after{
             content: "";
@@ -201,6 +221,7 @@
             top: -10%;
             height: 120%;
             border-radius: 0;
+            transition: all .55s cubic-bezier(.39,.58,.57,1);
           }
         }
       }
