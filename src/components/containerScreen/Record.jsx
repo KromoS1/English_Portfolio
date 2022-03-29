@@ -12,7 +12,7 @@ export const Record = () => {
     }
 
     return (
-        <section className={style.sectionBox}>
+        <section id={'pencil'} className={style.sectionBox}>
             <div className={style.container}>
                 <div className={style.title}>
                     <h3>Записаться</h3>

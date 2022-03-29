@@ -8,6 +8,103 @@
     @include adaptiveScreen();
     @include mainMarginContainer();
 
+    .teacherContainer{
+      padding-top: 15px;
+
+      .teacherRow{
+        background: $white;
+        padding: 35px;
+        border-radius: 15px;
+
+        .box{
+          --bs-gutter-x: 1.5rem;
+          --bs-gutter-y: 0;
+          display: flex;
+          flex-wrap: wrap;
+          margin-top: calc(var(--bs-gutter-y)*-1);
+          margin-right: calc(var(--bs-gutter-x)*-0.5);
+          margin-left: calc(var(--bs-gutter-x)*-0.5);
+
+          .avatarBox{
+            flex-shrink: 0;
+            width: 100%;
+            max-width: 100%;
+            padding-right: calc(var(--bs-gutter-x)*0.5);
+            padding-left: calc(var(--bs-gutter-x)*0.5);
+            margin-top: var(--bs-gutter-y);
+            display: flex;
+            justify-content: center;
+
+            @media (min-width: 768px){
+              flex: 0 0 auto;
+              width: 33.33333333%;
+            }
+
+            @media (min-width: 1200px) {
+              flex: 0 0 auto;
+              width: 20%;
+            }
+
+            .avatarTeacher{
+              width: 130px;
+              height: 130px;
+              border-radius: 50%;
+              overflow: hidden;
+              img{
+                display: block;
+                max-width: 100%;
+                vertical-align: middle;
+              }
+
+              @media (max-width: 767px) {
+                margin-bottom: 25px;
+              }
+              
+              @media (min-width: 768px) {
+                border-right: 1px solid rgba(11,11,19,.05);
+              }
+            }
+          }
+
+          .media{
+            flex-shrink: 0;
+            width: 100%;
+            max-width: 100%;
+            padding-right: calc(var(--bs-gutter-x)*0.5);
+            padding-left: calc(var(--bs-gutter-x)*0.5);
+            margin-top: var(--bs-gutter-y);
+
+            @media (min-width: 768px){
+              flex: 0 0 auto;
+              width: 66.66666667%;
+            }
+
+            @media (min-width: 1200px) {
+              flex: 0 0 auto;
+              width: 80%;
+            }
+
+            .infoTeacher{
+              h6{
+                color: #0b0b13;
+                font-weight: 600;
+                font-size: 20px;
+                margin-top: 0;
+                margin-bottom: 0.5rem;
+                line-height: 1.2;
+                font-family: "Rubik",monospac;
+              }
+              p{
+                color:$secondaryText;
+                margin-bottom: 0;
+                margin-top: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+
     .title{
       margin-bottom: 35px;
 
@@ -20,128 +117,65 @@
       }
     }
 
-    .wrapper{
+    .reviewContainer{
+      --bs-gutter-x: 1.5rem;
+      --bs-gutter-y: 0;
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: calc(var(--bs-gutter-y) * -1);
+      margin-right: calc(var(--bs-gutter-x) * -0.5);
+      margin-left: calc(var(--bs-gutter-x) * -0.5);
+      outline: none !important;
 
-      .slickSlider {
-        position: relative;
-        display: block;
-        box-sizing: border-box;
-        user-select: none;
-        touch-action: pan-y;
-        -webkit-tap-highlight-color: transparent;
-
-        .slickArrow {
-          @include buttonSlicker();
-        }
-
-        .slickList{
-          margin: 0 -10px;
-          transform: translateZ(0);
-          overflow: hidden;
-          padding: 0;
-
-          .slickTrack{
-            width: 4544px;
-            opacity: 1;
-            transform: translate3d(-1136px, 0px, 0px);
-            position: relative;
-            top: 0;
-            left: 0;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-
-            &:before{
-              display: table;
-              content: "";
-              box-sizing: border-box;
-            }
-
-            .slickSlide{
-              width: 568px;
-              display: block;
-              float: left;
-              height: 100%;
-              min-height: 1px;
-
-              .aosInit{
-                width: 100%;
-                display: inline-block;
-
-                .testimonial{
-                  background: #fff;
-                  padding: 35px;
-                  border-radius: 10px;
-                  overflow: hidden;
-                  margin-top: 15px;
-                  margin-bottom: 25px;
-                  display: flex!important;
-                  align-items: flex-start;
-
-                  .avatar{
-                    width: 100px;
-                    height: 100px;
-                    border-radius: 50%;
-                    overflow: hidden;
-                  }
-
-                  .mediaBody{
-                    padding-left: 25px;
-                    flex: 1 1;
-
-                    p{
-                      color:$secondaryText;
-                      margin-top: 0;
-                      margin-bottom: 1rem;
-                    }
-
-                    h6{
-                      color: #0b0b13;
-                      margin: 0 0 5px;
-                      font-size: 1rem;
-                      font-weight: 500;
-                      line-height: 1.2;
-                    }
-                    span{
-                      font-size: 13px;
-                    }
-                  }
-                }
-              }
-            }
-
-            &:after{
-              clear: both;
-              display: table;
-              content: "";
-              box-sizing: border-box;
-            }
-          }
-        }
-      }
-
-      .slickDots{
-        bottom: -30px;
-        position: absolute;
+      .reviewBox{
         width: 100%;
-        padding: 0;
-        margin: 0;
-        list-style: none;
-        text-align: center;
+        display: block;
+        float: left;
+        height: 100%;
+        min-height: 1px;
 
-        .slickActive{
-          @include slickActive();
-
-          button{
-            @include buttonsSlick();
-          }
+        @media (min-width: 992px){
+          flex:0 0 auto;
+          width: 50%;
         }
 
-        .slickDotsLi{
-         @include slickActive();
+        .box{
+          background: $white;
+          padding: 35px;
+          border-radius: 10px;
+          overflow: hidden;
+          margin-top: 15px;
+          margin-bottom: 25px;
+          display: flex!important;
+          align-items: flex-start;
 
-          button{
-            @include buttonsSlick();
+
+          .avatar{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            overflow: hidden;
+            img{
+              display: block;
+              max-width: 100%;
+              vertical-align: middle;
+            }
+          }
+
+          .mediaBody{
+            padding-left: 25px;
+            flex: 1 1;
+            p{
+              margin-top: 0;
+              margin-bottom: 1rem;
+            }
+            h6{
+              color: #0b0b13;
+              font-size: 16px;
+              margin: 0 0 5px;
+              font-weight: 600;
+              line-height: 1.2;
+            }
           }
         }
       }

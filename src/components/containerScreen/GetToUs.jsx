@@ -1,10 +1,9 @@
 import React from "react";
 import style from '../../styles/getToUsStyles.module.scss';
-import {Separated} from "../common/Separated";
 
 export const GetToUs = () => {
     return (
-        <section className={style.section}>
+        <section id={'library'} className={style.section}>
             <div className={style.container}>
                 <div className={style.title}>
                     <h3>Как к нам попасть?</h3>
