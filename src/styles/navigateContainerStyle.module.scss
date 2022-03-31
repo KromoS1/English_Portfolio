@@ -1,21 +1,5 @@
 @import 'mainStyles';
 
-.container{
-  width: 80px;
-  position: fixed;
-  left: 0;
-  top: 0;
-  height: 100vh;
-  background: #fff;
-  border-right: 1px solid rgba(11,11,19,.1);
-
-  @media (max-width: 767px) {
-    transition: all .35s ease;
-    -webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
-    z-index: 222;
-  }
-  
   .scroll_bar{
     height: 100%;
 
@@ -74,5 +58,5 @@
       }
     }
   }
-}
+
 

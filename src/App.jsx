@@ -4,10 +4,10 @@ import {NavigateContainer} from "./components/navigate/NavigateContainer";
 import style from './App.module.scss';
 
 function App() {
-  return (
+    return (
       <div className={style.app}>
-        <NavigateContainer/>
-        <ContainerScreen/>
+          <NavigateContainer/>
+          <ContainerScreen/>
       </div>
   );
 }

@@ -5,7 +5,6 @@ import {BlocWe} from "../common/BlocWe";
 import Me from '../../img/MePhoto.jpg';
 import {Problem} from "../common/Problem";
 import Fade from 'react-reveal/Fade';
-import Slide from 'react-reveal/Slide';
 
 export const About = () => {
 

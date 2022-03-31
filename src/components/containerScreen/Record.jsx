@@ -38,7 +38,7 @@ export const Record = () => {
                                     </div>
                                 </div>
                                 <div className={style.inputBox}>
-                                    <div className={style.btnBar}>
+                                    <div className={style.btnBar} style={{display:'flex',justifyContent:'center'}}>
                                         <button type={"submit"}>Записаться</button>
                                     </div>
                                 </div>

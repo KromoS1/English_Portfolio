@@ -1,0 +1,24 @@
+.mobHeader{
+  display: none;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 11;
+
+  @media (max-width: 767px) {
+    display: block;
+  }
+
+  .togglerMenu{
+    width: 60px;
+    height: 60px;
+    position: relative;
+    border-radius: 50%;
+    padding: 0;
+    background: #ff9301;
+    border: none;
+    cursor: pointer;
+    margin-left: auto;
+    text-transform: none;
+  }
+}

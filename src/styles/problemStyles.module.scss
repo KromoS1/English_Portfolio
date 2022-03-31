@@ -5,11 +5,23 @@
   .box{
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
+    
+    @media (max-width: 767px) {
+      flex-direction: column;
+    }
 
     .problem{
         width: 50%;
         margin-bottom: 15px;
+
+      &:nth-child(odd){
         padding-right: 60px;
+      }
+
+      @media (max-width: 767px) {
+        width: 100%;
+      }
 
       h4{
         @include h4();
