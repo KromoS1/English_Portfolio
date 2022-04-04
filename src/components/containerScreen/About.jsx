@@ -4,7 +4,7 @@ import {Separated} from "../common/Separated";
 import {BlocWe} from "../common/BlocWe";
 import Me from '../../img/MePhoto.jpg';
 import {Problem} from "../common/Problem";
-import Fade from 'react-reveal/Fade';
+import Slide from 'react-reveal/Slide';
 
 export const About = () => {
 
@@ -12,7 +12,7 @@ export const About = () => {
         <section id={'user'} className={style.sectionBox}>
             <div className={style.container}>
                <div className={style.aboutBox}>
-                  <Fade bottom>
+                  <Slide bottom>
                       <div className={style.photo}>
                           <div className={style.aboutMe}>
                               <div className={style.img}>
@@ -26,8 +26,8 @@ export const About = () => {
                               </div>
                           </div>
                       </div>
-                  </Fade>
-                  <Fade bottom>
+                  </Slide>
+                  <Slide bottom>
                       <div  className={style.biography}>
                           <div className={style.info}>
                               <div className={style.title}>
@@ -60,7 +60,7 @@ export const About = () => {
                               </div>
                           </div>
                       </div>
-                  </Fade>
+                  </Slide>
                </div>
                 <Separated/>
                 <div className={style.title}>
@@ -73,16 +73,22 @@ export const About = () => {
                 <div className={style.title}>
                     <h3>Почему мы?</h3>
                 </div>
-                <Fade left cascade>
+                <Slide bottom >
                     <div className={style.blockWeBox}>
-                        <BlocWe title={'Web Design'}
-                                text={'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'}/>
-                        <BlocWe title={'Web Development'}
-                                text={'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'}/>
-                        <BlocWe title={'Seo Marcketing'}
-                                text={'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'}/>
+                        <BlocWe title={'Современная методика'}
+                                text={'Уроки построены на коммуникативном подходе с применением современных методик. Наши преподаватели много вкладывают в своё обучение , чтобы наши занятия были качественными и вовлекающими.'}/>
+                        <BlocWe title={'Результат'}
+                                text={'Под четким  сопровождением преподавателя,который вкладывает свои силы в ваше обучение,регулярном  посещении занятий и выполнении домашки результат виден уже в первый месяц работы.'}/>
+                        <BlocWe title={'Занятия из любой точки мира'}
+                                text={'Онлайн- занятия по Skype/zoom позволяют Вам экономить время на дорогу, не откладывать уроки,даже если Вы в командировке,путешествии или переехали в другой город или страну.'}/>
+                        <BlocWe title={'Несколько форматов обучения'}
+                                text={'В мини-группах или индивидуально - зависит от вас и вашей цели.'}/>
+                        <BlocWe title={'Решаем ваши задачи'}
+                                text={'Каждый студент приходит со своим запросом. Мы используем индивидуальный подход,учитываем желания студента , стараемся  сделать уроки не только полезными и результативными,но и насыщенными и интересными.В результате студенты разговаривают 70% урока, преодолевают языковой барьер и достигают своих целей.'}/>
+                        <BlocWe title={'Удобные варианты оплаты'}
+                                text={'Вы можете произвести оплату дистанционно на карт-счёт за месяц. Возможно оформить беспроцентную рассрочку школы, разбив сумму на несколько платежей.'}/>
                     </div>
-                </Fade>
+                </Slide>
             </div>
         </section>
     )

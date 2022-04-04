@@ -8,10 +8,8 @@ export const Home = () => {
                <div className={style.homeBox}>
                    <div className={style.info}>
                        <div className={style.typeBox}>
-                           <h1>Дарья Раковская</h1>
-                           <p>I design and develop services for customers of all sizes,
-                               specializing in creating stylish, modern websites, web
-                               services and online stores.</p>
+                           <h1>Онлайн-школа английского языка <br/>Open Mind English</h1>
+                           <p>Здесь вы получите мощную языковую практику с результатом уже в первый месяц, подготовитесь к любому экзамену, получая удовольствие от каждого урока.</p>
                        </div>
                    </div>
                    <div className={style.photo}>photo</div>
