@@ -3,11 +3,13 @@ import style from '../../styles/reviewsStyles.module.scss';
 import {Separated} from "../common/Separated";
 
 export const Reviews = () => {
+
+    //TODO сделать слайдами
     return (
         <section id={'users'} className={style.section}>
             <div className={style.container}>
                 <div className={style.title}>
-                    <h3>Преподователи</h3>
+                    <h3>Преподаватели</h3>
                 </div>
                 <div className={style.teacherContainer}>
                     <div className={style.teacherRow}>
@@ -69,6 +71,7 @@ export const Reviews = () => {
                     </div>
                 </div>
                 <Separated/>
+                {/*TODO тоже слайдами*/}
                 <div className={style.title}>
                     <h3>Отзывы</h3>
                 </div>

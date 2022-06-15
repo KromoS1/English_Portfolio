@@ -35,12 +35,12 @@
       .icon_box{
         width: 100%;
 
+        .active > div{
+          color:$orange;
+        }
+
         .icon_link{
           @include displayFlex(row,center,center);
-
-          .active{
-            color:$orange;
-          }
 
           color: $mainText;
           cursor: pointer;

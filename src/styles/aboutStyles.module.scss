@@ -59,7 +59,8 @@
             p{
               color: $mainText;
               margin: 0;
-              font-size: 16px;
+              font-size: 18px;
+              font-weight: 400;
             }
             h3{
               @include h3();
@@ -98,42 +99,10 @@
           }
           .aboutText{
             p{
-              @include p();
-            }
-          }
-          .infoList{
-            padding-top: 15px;
-
-            .rowInfoList{
-              @include row();
-              margin-top: calc(var(--bs-gutter-y)*-1);
-              display: flex;
-
-              .columnList{
-                ul{
-                  margin: 0;
-                  padding: 0;
-                  list-style: none;
-                  li{
-                    padding: 4px 0;
-                    label{
-                      color: $mainText;
-                      margin: 0;
-                      font-weight: 600;
-                      padding-right: 10px;
-                      display: inline-block;
-                    }
-                    span{
-                      @include p();
-                    }
-                  }
-                }
-
-                @media (min-width: 576px) {
-                  flex: 0 0 auto;
-                  width: 50%;
-                }
+              b{
+                font-size: 20px;
               }
+              @include p();
             }
           }
         }

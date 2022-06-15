@@ -1,69 +1,71 @@
 @import "mainStyles";
 
-.section{
+.section {
   @include section();
 
-  .container{
+  .container {
     @include adaptiveScreen();
     @include mainMarginContainer();
 
-    .title{
+    .title {
       margin-bottom: 35px;
 
-      h3{
+      h3 {
         @include h3();
 
-        &:after{
+        &:after {
           @include afterBall();
         }
       }
     }
 
-    .rowStage{
+    .rowStage {
       --bs-gutter-x: 1.5rem;
       --bs-gutter-y: 0;
       display: flex;
       flex-wrap: wrap;
-      margin-top: calc(var(--bs-gutter-y)*-1);
-      margin-right: calc(var(--bs-gutter-x)*-0.5);
-      margin-left: calc(var(--bs-gutter-x)*-0.5);
-      outline: none!important;
+      margin-top: calc(var(--bs-gutter-y) * -1);
+      margin-right: calc(var(--bs-gutter-x) * -0.5);
+      margin-left: calc(var(--bs-gutter-x) * -0.5);
+      outline: none !important;
 
-      .stageBox{
+      .stageBox {
         margin-top: 15px;
         padding-bottom: 15px;
         max-width: 100%;
         width: 100%;
-        padding-right: calc(var(--bs-gutter-x)*0.5);
-        padding-left: calc(var(--bs-gutter-x)*0.5);
+        padding-right: calc(var(--bs-gutter-x) * 0.5);
+        padding-left: calc(var(--bs-gutter-x) * 0.5);
 
-        @media (min-width: 992px){
+        @media (min-width: 992px) {
           flex: 0 0 auto;
           width: 33.33333333%;
         }
 
-        .stage{
-          background-color:$grayWhite;
+        .stage {
+          background-color: $grayWhite;
           padding: 15px;
           border-radius: 10px;
           overflow: hidden;
           transition: .3s;
 
-          &:hover{
-            transform: translateY(-15px);
-          }
-          .infoStage{
-
-            h6{
-              color: #0b0b13;
-              margin: 0 0 5px;
-              font-size: 20px;
-              font-weight: 600;
-              line-height: 1.2;
+          &:hover {
+            transform: translateY(-10px);
+            .icon {
+              color: $orange;
             }
-            p{
-              @include p();
-              font-size: 18px;
+          }
+
+          .infoStage {
+            @include displayFlex(row, '', '');
+
+            .mediaBody {
+              padding-left: 15px;
+
+              p {
+                @include p();
+                font-size: 18px;
+              }
             }
           }
         }
