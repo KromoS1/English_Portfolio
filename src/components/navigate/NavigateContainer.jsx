@@ -18,7 +18,7 @@ export const NavigateContainer = () => {
                 <div className={style.scroll_bar}>
                     <div className={style.top}>
                         <div className={style.logo_box}>
-                            <a className={style.logo} href={'/'}>N</a>
+                            <a className={style.logo} href={'/'}>OME</a>
                         </div>
                     </div>
                     <div className={style.nav_menu}>

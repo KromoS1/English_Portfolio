@@ -14,7 +14,7 @@ export const ContainerScreen = () => {
             <About/>
             <GetToUs/>
             <Reviews/>
-            <Record/>
+            <Record id={'pencil'}/>
             <Footer/>
         </div>
     )

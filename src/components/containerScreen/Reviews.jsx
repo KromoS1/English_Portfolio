@@ -1,10 +1,25 @@
 import React from "react";
 import style from '../../styles/reviewsStyles.module.scss';
 import {Separated} from "../common/Separated";
+import AliceCarousel from "react-alice-carousel";
+import 'react-alice-carousel/lib/alice-carousel.css';
+import {Teacher} from "../common/Teacher";
+import {Review} from "../common/Review";
+
+const teachers = [
+    <Teacher/>,
+    <Teacher/>,
+    <Teacher/>,
+];
+
+const reviews = [
+    <Review/>,
+    <Review/>,
+    <Review/>,
+]
 
 export const Reviews = () => {
 
-    //TODO сделать слайдами
     return (
         <section id={'users'} className={style.section}>
             <div className={style.container}>
@@ -12,130 +27,32 @@ export const Reviews = () => {
                     <h3>Преподаватели</h3>
                 </div>
                 <div className={style.teacherContainer}>
-                    <div className={style.teacherRow}>
-                        <div className={style.box}>
-                            <div className={style.avatarBox}>
-                                <div className={style.avatarTeacher}>
-                                    <img src="	https://nairo.ibthemespro.com/img/testimonial/team-1.jpg" alt="#"/>
-                                </div>
-                            </div>
-                            <div className={style.media}>
-                                <div className={style.infoTeacher}>
-                                    <h6>Дарья</h6>
-                                    <p>Adipisicing Lorem ipsum dolor sit amet, consectetur elit,
-                                        sed do eiusmod tempor incididunt ut labore et dolore magna
-                                        aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                                        ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                        Duis aute irure dolor.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className={style.teacherRow} style={{marginTop:'30px'}}>
-                        <div className={style.box}>
-                            <div className={style.avatarBox}>
-                                <div className={style.avatarTeacher}>
-                                    <img src="	https://nairo.ibthemespro.com/img/testimonial/team-1.jpg" alt="#"/>
-                                </div>
-                            </div>
-                            <div className={style.media}>
-                                <div className={style.infoTeacher}>
-                                    <h6>Дарья</h6>
-                                    <p>Adipisicing Lorem ipsum dolor sit amet, consectetur elit,
-                                        sed do eiusmod tempor incididunt ut labore et dolore magna
-                                        aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                                        ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                        Duis aute irure dolor.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className={style.teacherRow} style={{marginTop:'30px'}}>
-                        <div className={style.box}>
-                            <div className={style.avatarBox}>
-                                <div className={style.avatarTeacher}>
-                                    <img src="	https://nairo.ibthemespro.com/img/testimonial/team-1.jpg" alt="#"/>
-                                </div>
-                            </div>
-                            <div className={style.media}>
-                                <div className={style.infoTeacher}>
-                                    <h6>Дарья</h6>
-                                    <p>Adipisicing Lorem ipsum dolor sit amet, consectetur elit,
-                                        sed do eiusmod tempor incididunt ut labore et dolore magna
-                                        aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                                        ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                        Duis aute irure dolor.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <AliceCarousel autoPlayStrategy={"all"}
+                                   controlsStrategy={'alternate,responsive'}
+                                   disableButtonsControls
+                                   infinite
+                                   touchTracking
+                                   animationDuration={1000}
+                                   autoPlayInterval={5000}
+                                   autoPlay
+                                   mouseTracking
+                                   items={teachers} />
                 </div>
                 <Separated/>
-                {/*TODO тоже слайдами*/}
                 <div className={style.title}>
                     <h3>Отзывы</h3>
                 </div>
                 <div className={style.reviewContainer}>
-                    <div className={style.reviewBox}>
-                        <div style={{margin:'0 10px'}}>
-                            <div className={style.box}>
-                                <div className={style.avatar}>
-                                    <img src="	https://nairo.ibthemespro.com/img/testimonial/team-1.jpg" alt="#"/>
-                                </div>
-                                <div className={style.mediaBody}>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and
-                                        typesetting industry. Lorem Ipsum has been the industry's
-                                        standard dummy text ever since the 1500s.</p>
-                                    <h6>Анастасия</h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className={style.reviewBox}>
-                        <div style={{margin:'0 10px'}}>
-                            <div className={style.box}>
-                                <div className={style.avatar}>
-                                    <img src="	https://nairo.ibthemespro.com/img/testimonial/team-1.jpg" alt="#"/>
-                                </div>
-                                <div className={style.mediaBody}>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and
-                                        typesetting industry. Lorem Ipsum has been the industry's
-                                        standard dummy text ever since the 1500s.</p>
-                                    <h6>Анастасия</h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className={style.reviewBox}>
-                        <div style={{margin:'0 10px'}}>
-                            <div className={style.box}>
-                                <div className={style.avatar}>
-                                    <img src="	https://nairo.ibthemespro.com/img/testimonial/team-1.jpg" alt="#"/>
-                                </div>
-                                <div className={style.mediaBody}>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and
-                                        typesetting industry. Lorem Ipsum has been the industry's
-                                        standard dummy text ever since the 1500s.</p>
-                                    <h6>Анастасия</h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className={style.reviewBox}>
-                        <div style={{margin:'0 10px'}}>
-                            <div className={style.box}>
-                                <div className={style.avatar}>
-                                    <img src="	https://nairo.ibthemespro.com/img/testimonial/team-1.jpg" alt="#"/>
-                                </div>
-                                <div className={style.mediaBody}>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and
-                                        typesetting industry. Lorem Ipsum has been the industry's
-                                        standard dummy text ever since the 1500s.</p>
-                                    <h6>Анастасия</h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <AliceCarousel autoPlayStrategy={"all"}
+                                   controlsStrategy={'alternate,responsive'}
+                                   disableButtonsControls
+                                   infinite
+                                   touchTracking
+                                   animationDuration={1000}
+                                   autoPlayInterval={5000}
+                                   autoPlay
+                                   mouseTracking
+                                   items={reviews} />
                 </div>
             </div>
         </section>

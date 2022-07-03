@@ -2,7 +2,7 @@ import React, {useRef} from "react";
 import style from '../../styles/recordStyles.module.scss';
 import {sendForm} from "../../api/emailjsApi";
 
-export const Record = () => {
+export const Record = ({title,id}) => {
 
     const form = useRef();
 
@@ -12,10 +12,10 @@ export const Record = () => {
     }
 
     return (
-        <section id={'pencil'} className={style.sectionBox}>
+        <section id={id ? id : ''} className={style.sectionBox}>
             <div className={style.container}>
                 <div className={style.title}>
-                    <h3>Записаться</h3>
+                    <h3>{title ? title : 'Записаться'}</h3>
                 </div>
                 <div className={style.row}>
                     <div className={style.contactForm}>

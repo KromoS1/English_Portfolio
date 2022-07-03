@@ -15,6 +15,8 @@
         background: $white;
         padding: 35px;
         border-radius: 15px;
+        margin-right: 10px;
+        margin-left: 10px;
 
         .box{
           --bs-gutter-x: 1.5rem;
@@ -59,7 +61,7 @@
               @media (max-width: 767px) {
                 margin-bottom: 25px;
               }
-              
+
               @media (min-width: 768px) {
                 border-right: 1px solid rgba(11,11,19,.05);
               }
@@ -128,27 +130,16 @@
       outline: none !important;
 
       .reviewBox{
-        width: 100%;
-        display: block;
-        float: left;
-        height: 100%;
-        min-height: 1px;
-
-        @media (min-width: 992px){
-          flex:0 0 auto;
-          width: 50%;
-        }
+        background: $white;
+        padding: 35px;
+        border-radius: 15px;
+        margin-right: 10px;
+        margin-left: 10px;
 
         .box{
-          background: $white;
-          padding: 35px;
-          border-radius: 10px;
           overflow: hidden;
-          margin-top: 15px;
-          margin-bottom: 25px;
           display: flex!important;
           align-items: flex-start;
-
 
           .avatar{
             width: 100px;

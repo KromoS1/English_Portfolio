@@ -4,6 +4,7 @@ import {Separated} from "../common/Separated";
 import {BlocWe} from "../common/BlocWe";
 import Me from '../../img/MePhoto.jpg';
 import {Problem} from "../common/Problem";
+import {Record} from "./Record";
 
 export const About = () => {
 
@@ -53,6 +54,8 @@ export const About = () => {
                         </div>
                     </div>
                 </div>
+                <Separated/>
+                <Record title={'Можете записаться прямо сейчас.'}/>
                 <Separated/>
                 <div className={style.title}>
                     <h3>Сталкивались с этими проблемами?</h3>
