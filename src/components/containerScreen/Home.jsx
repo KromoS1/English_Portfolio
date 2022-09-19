@@ -1,5 +1,6 @@
 import React from "react";
-import style from '../../styles/homeStyles.module.scss'
+import style from '../../styles/homeStyles.module.scss';
+import mainPhoto from '../../assets/mainPhoto.png';
 
 export const Home = () => {
     return (
@@ -12,7 +13,11 @@ export const Home = () => {
                            <p>Здесь вы получите мощную языковую практику с результатом уже в первый месяц, подготовитесь к любому экзамену, получая удовольствие от каждого урока.</p>
                        </div>
                    </div>
-                   <div className={style.photo}>photo</div>
+                   <div className={style.photo}>
+                       <div className={style.circleBack}/>
+                       <img src={mainPhoto} className={style.mainPhoto} alt="#"/>
+                       <div className={style.circleFront}/>
+                   </div>
                </div>
            </div>
         </section>

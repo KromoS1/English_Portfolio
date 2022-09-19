@@ -10,7 +10,7 @@ export const Teacher = () => {
             <div className={style.box}>
                 <div className={style.avatarBox}>
                     <div className={style.avatarTeacher}>
-                        <img src="	https://nairo.ibthemespro.com/img/testimonial/team-1.jpg" alt="#"/>
+                        <img src="https://nairo.ibthemespro.com/img/testimonial/team-1.jpg" alt="#"/>
                     </div>
                 </div>
                 <div className={style.media}>
