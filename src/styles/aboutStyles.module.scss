@@ -40,32 +40,22 @@
 
           .img{
             position: relative;
+
             .imgIn{
-              border-radius: 50%;
-              max-width: 356px;
-              max-height: 358px;
+              width: 356px;
+              height: 420px;
+              background: url("../img/dashaBio.jpg") 70px 0/auto 100% no-repeat;
               margin: auto;
               overflow: hidden;
-              border: 5px solid $orange;
-              img{
-                max-width: 100%;
-              }
-            }
-          }
-          .infoName{
-            color: $mainText;
-            text-align: center;
-            padding-top: 40px;
-            p{
-              color: $mainText;
-              margin: 0;
-              font-size: 18px;
-              font-weight: 400;
-            }
-            h3{
-              @include h3();
-              font-weight: 600;
 
+              @media (max-width: 576px) {
+                width: 300px;
+                background: url("../img/dashaBio.jpg") center / cover no-repeat;
+              }
+
+              @media (min-width: 992px) {
+                background: url("../img/dashaBio.jpg") 0 0/auto 100% no-repeat;
+              }
             }
           }
         }
@@ -86,17 +76,25 @@
         }
 
         .info{
-          .title{
-            margin-bottom: 30px;
-
+          .infoName{
+            color: $mainText;
+            margin-bottom: 20px;
+            p{
+              color: $mainText;
+              margin: 0;
+              font-size: 18px;
+              font-weight: 400;
+            }
             h3{
               @include h3();
+              font-weight: 600;
 
               &:after{
                 @include afterBall();
               }
             }
           }
+
           .aboutText{
             p{
               b{

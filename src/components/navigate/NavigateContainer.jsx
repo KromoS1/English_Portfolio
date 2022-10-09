@@ -18,14 +18,20 @@ export const NavigateContainer = () => {
                 <div className={style.scroll_bar}>
                     <div className={style.top}>
                         <div className={style.logo_box}>
-                            <a className={style.logo} href={'/'}>OME</a>
+                            <a className={style.logo} href={'/'}/>
+                        </div>
+                        <div className={style.logo_box}>
+                            <a className={style.logo2} href={'/'}/>
+                        </div>
+                        <div className={style.logo_box}>
+                            <a className={style.logo3} href={'/'}/>
                         </div>
                     </div>
                     <div className={style.nav_menu}>
                         <IconNav iconName={'home'} size={25} href={'home'} />
                         <IconNav iconName={'user'} size={25} href={'user'} />
                         <IconNav iconName={'library'} size={25} href={'library'} />
-                        <IconNav iconName={'users'} size={25} href={'users'} />
+                        {/*<IconNav iconName={'users'} size={25} href={'users'} />*/}
                         <IconNav iconName={'pencil'} size={25} href={'pencil'} />
                     </div>
                 </div>

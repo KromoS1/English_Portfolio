@@ -19,7 +19,6 @@ export const Record = ({title,id}) => {
                 </div>
                 <div className={style.row}>
                     <div className={style.contactForm}>
-                        <h4>Заполните форму что бы записаться</h4>
                         <form ref={form} onSubmit={send}>
                             <div className={style.rowForm}>
                                 <div className={style.inputBox}>

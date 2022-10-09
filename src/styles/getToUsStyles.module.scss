@@ -19,6 +19,88 @@
       }
     }
 
+
+
+    .title {
+      margin-bottom: 35px;
+
+      h3 {
+        @include h3();
+
+        &:after {
+          @include afterBall();
+        }
+      }
+    }
+
+    .rowStage {
+      --bs-gutter-x: 1.5rem;
+      --bs-gutter-y: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: calc(var(--bs-gutter-y) * -1);
+      margin-right: calc(var(--bs-gutter-x) * -0.5);
+      margin-left: calc(var(--bs-gutter-x) * -0.5);
+      outline: none !important;
+
+      .stageBoxQuestion {
+        margin-top: 15px;
+        padding-bottom: 15px;
+        max-width: 100%;
+        width: 100%;
+        padding-right: calc(var(--bs-gutter-x) * 0.5);
+        padding-left: calc(var(--bs-gutter-x) * 0.5);
+
+        @media (min-width: 992px) {
+          flex: 0 0 auto;
+          width: 80%;
+        }
+
+        .stageQuestion {
+          background-color: $grayWhite;
+          padding: 15px;
+          border-radius: 10px;
+          overflow: hidden;
+          transition: .3s;
+
+          .accordion{
+            border-radius: 10px;
+            background-color: $grayWhite;
+            font-size: 16px;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            text-align: left;
+            border: none;
+            outline: none;
+            transition: 0.4s;
+
+            &:hover{
+              background-color: #cccce3;
+            }
+          }
+
+          .panel{
+            border-radius: 10px;
+            width: 100%;
+            padding: 0 18px;
+            background-color: $grayWhite;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+
+            p {
+              @include p();
+              text-align: left;
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+
     .rowStage {
       --bs-gutter-x: 1.5rem;
       --bs-gutter-y: 0;

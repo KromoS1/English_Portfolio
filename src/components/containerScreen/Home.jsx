@@ -1,6 +1,6 @@
 import React from "react";
 import style from '../../styles/homeStyles.module.scss';
-import mainPhoto from '../../assets/mainPhoto.png';
+import mainPhoto from '../../img/mainPhoto.png';
 
 export const Home = () => {
     return (
@@ -14,9 +14,7 @@ export const Home = () => {
                        </div>
                    </div>
                    <div className={style.photo}>
-                       <div className={style.circleBack}/>
                        <img src={mainPhoto} className={style.mainPhoto} alt="#"/>
-                       <div className={style.circleFront}/>
                    </div>
                </div>
            </div>
