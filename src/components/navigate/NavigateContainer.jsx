@@ -28,11 +28,11 @@ export const NavigateContainer = () => {
                         </div>
                     </div>
                     <div className={style.nav_menu}>
-                        <IconNav iconName={'home'} size={25} href={'home'} />
-                        <IconNav iconName={'user'} size={25} href={'user'} />
-                        <IconNav iconName={'library'} size={25} href={'library'} />
+                        <IconNav iconName={'home'} size={25} href={'#home'} />
+                        <IconNav iconName={'user'} size={25} href={'#user'} />
+                        <IconNav iconName={'library'} size={25} href={'#library'} />
                         {/*<IconNav iconName={'users'} size={25} href={'users'} />*/}
-                        <IconNav iconName={'pencil'} size={25} href={'pencil'} />
+                        <IconNav iconName={'pencil'} size={25} href={'#pencil'} />
                     </div>
                 </div>
             </header>
