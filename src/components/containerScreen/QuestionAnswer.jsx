@@ -18,7 +18,7 @@ export const QuestionAnswer = ({question, answer}) => {
     return (
         <div className={style.stageBoxQuestion}>
             <div className={style.stageQuestion}>
-                <button className={style.accordion} onClick={e => addListener(e.currentTarget)}>{question}</button>
+                <p className={style.accordion} onClick={e => addListener(e.currentTarget)}>{question}</p>
                 <div className={style.panel}>
                     <p>
                         {answer}

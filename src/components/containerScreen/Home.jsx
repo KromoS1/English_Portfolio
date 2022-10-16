@@ -9,7 +9,8 @@ export const Home = () => {
                <div className={style.homeBox}>
                    <div className={style.info}>
                        <div className={style.typeBox}>
-                           <h1>Онлайн-школа английского языка <br/>Open Mind English</h1>
+                           <h1><b>Open Mind English</b></h1>
+                           <h2>Онлайн-школа английского языка</h2><br/>
                            <p>Здесь вы получите мощную языковую практику с результатом уже в первый месяц, подготовитесь к любому экзамену, получая удовольствие от каждого урока.</p>
                        </div>
                    </div>

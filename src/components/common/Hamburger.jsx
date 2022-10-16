@@ -11,7 +11,7 @@ export const Hamburger = ({switchHamburger,isOpenNav}) => {
                     <span className={'line three'}/>
                 </button>
             </div>
-            <style jsx>{`
+            <style>{`
                 .line{
                   position: absolute;
                   top: 0;

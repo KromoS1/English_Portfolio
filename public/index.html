@@ -17,10 +17,30 @@
         gtag('config', 'G-36N4ME7P9V');
     </script>
 
-    <link rel="icon" href="%PUBLIC_URL%/logoOME.png" type="image/png">
+    <link rel="icon" href="%PUBLIC_URL%/logo.png" type="image/png">
     <title>Open Mind English</title>
 </head>
 <body>
 <div id="root"></div>
+
+<script type="module">
+
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-analytics.js";
+
+    const firebaseConfig = {
+        apiKey: "AIzaSyDTKbrE1V6t_ReFSFi9kI3su_L9ZpN_MvQ",
+        authDomain: "open-mind-english.firebaseapp.com",
+        projectId: "open-mind-english",
+        storageBucket: "open-mind-english.appspot.com",
+        messagingSenderId: "983767980430",
+        appId: "1:983767980430:web:f848d67c00d4eb2e25acdf",
+        measurementId: "G-TY5PMYSZ54"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+
+</script>
 </body>
 </html>
