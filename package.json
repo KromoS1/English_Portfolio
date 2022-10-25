@@ -1,7 +1,6 @@
 {
   "name": "porfolio_english",
   "version": "0.1.0",
-  "homepage": "https://KromoS1.github.io/English_Portfolio",
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^3.4.0",
