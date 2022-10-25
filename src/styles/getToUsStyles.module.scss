@@ -82,14 +82,14 @@
             }
           }
 
-          .panel{
-            border-radius: 10px;
+          .panel{ border-radius: 10px;
             width: 100%;
             padding: 0 18px;
             background-color: $grayWhite;
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.2s ease-out;
+
 
             p {
               @include p();
