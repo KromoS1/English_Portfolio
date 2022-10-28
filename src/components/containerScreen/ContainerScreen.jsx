@@ -5,6 +5,7 @@ import {About} from "./About";
 import {GetToUs} from "./GetToUs";
 import {Record} from "./Record";
 import {Footer} from "./Footer";
+import {Reviews} from "./Reviews";
 
 export const ContainerScreen = () => {
     return (
@@ -12,7 +13,7 @@ export const ContainerScreen = () => {
             <Home/>
             <About/>
             <GetToUs/>
-            {/*<Reviews/>*/}
+            <Reviews/>
             <Record id={'pencil'}/>
             <Footer/>
         </div>
