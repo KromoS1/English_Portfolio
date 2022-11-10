@@ -27,6 +27,7 @@ export const Reviews = () => {
                     <AliceCarousel autoPlayStrategy={"all"}
                                    controlsStrategy={'alternate,responsive'}
                                    disableButtonsControls
+                                   animationType={'slide'}
                                    infinite
                                    touchTracking
                                    animationDuration={1000}
