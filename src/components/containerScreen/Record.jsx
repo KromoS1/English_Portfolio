@@ -15,7 +15,7 @@ export const Record = ({title,id}) => {
         <section id={id ? id : ''} className={style.sectionBox}>
             <div className={style.container}>
                 <div className={style.title}>
-                    <h3>{title ? title : 'Записаться'}</h3>
+                    <h3>{title ? title : 'Записаться к нам на обучение'}</h3>
                 </div>
                 <div className={style.row}>
                     <div className={style.contactForm}>

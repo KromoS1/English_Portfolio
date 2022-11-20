@@ -13,6 +13,8 @@ const reviews = [
     <Review nameComment={'comm6'}/>,
     <Review nameComment={'comm7'}/>,
     <Review nameComment={'comm8'}/>,
+    <Review nameComment={'comm9'}/>,
+    <Review nameComment={'comm10'}/>,
 ]
 
 export const Reviews = () => {
